@@ -6,37 +6,31 @@
 
 """Setup script for customization demo."""
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
-    name="weblate_customization",
-    version="0.1",
-    packages=["weblate_customization"],
+    name='weblate-chatgpt',
+    version='0.1.0',
+    description='ChatGPT machine translation engine for Weblate',
+    author='Dennis',
+    author_email='dingxing@xd.com',
+    url='https://github.com/your_username/weblate-chatgpt',
+    packages=find_packages(),
     include_package_data=True,
-    license="GPL-3.0-or-later",
-    description="Weblate customization example",
-    long_description="Weblate customization example",
-    keywords="i18n l10n gettext git mercurial translate",
-    url="https://weblate.org/",
-    author="Michal Čihař",
-    author_email="michal@cihar.com",
-    install_requires=["Weblate"],
-    zip_safe=False,
+    install_requires=[
+        'requests',
+        'openai'
+    ],
     classifiers=[
-        "Environment :: Web Environment",
-        "Framework :: Django",
-        "Intended Audience :: Developers",
-        "Intended Audience :: System Administrators",
-        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
-        "Operating System :: OS Independent",
-        "Development Status :: 5 - Production/Stable",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.4",
-        "Programming Language :: Python :: 3.5",
-        "Topic :: Software Development :: Internationalization",
-        "Topic :: Software Development :: Localization",
-        "Topic :: Internet :: WWW/HTTP",
-        "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+        'Development Status :: 3 - Alpha',
+        'Environment :: Web Environment',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
 )
